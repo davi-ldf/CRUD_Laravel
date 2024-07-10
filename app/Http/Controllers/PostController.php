@@ -14,9 +14,16 @@ class PostController extends Controller
             'content' => 'Conteúdo Qualquer',
             'author' => 'Davi'
         ];
+        // Forma mais convencional de criar um registro no Database
+        // $post = new Post($new_post);
+        // $post->save();
 
-        $posts = new Post($new_post);
+        $post = new Post();
 
-        dd($posts);
+        $post->title = 'Meu Segundo Post';
+        $post->content = 'Conteúdo do post';
+        $post->author = 'Nikola Tesla';
+        $post->save();
+        dd($post);
     }
 }

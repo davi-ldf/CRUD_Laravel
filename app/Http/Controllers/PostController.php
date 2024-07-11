@@ -33,14 +33,15 @@ class PostController extends Controller
         
         $post = new Post();
 
-        $post = $post->all();
+        $post = $post->find(1);
+        //O find busca pela Primary Key (id)
 
-        dd($post);
+        return $post;
     }
 
     public function all(Request $r) {
         $posts = Post::all();
-        
+
         return $posts;
     }
 }

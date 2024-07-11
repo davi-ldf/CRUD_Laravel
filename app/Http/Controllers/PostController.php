@@ -18,12 +18,23 @@ class PostController extends Controller
         // $post = new Post($new_post);
         // $post->save();
 
+
+        // Forma menos convencional
+        // $post = new Post();
+
+        // $post->title = 'Meu Segundo Post';
+        // $post->content = 'Conteúdo do post';
+        // $post->author = 'Nikola Tesla';
+        // $post->save();
+        // dd($post);
+    }
+
+    public function read(Request $r) {
+        
         $post = new Post();
 
-        $post->title = 'Meu Segundo Post';
-        $post->content = 'Conteúdo do post';
-        $post->author = 'Nikola Tesla';
-        $post->save();
-        dd($post);
+        $posts = $post->all();
+
+        dd($posts);
     }
 }

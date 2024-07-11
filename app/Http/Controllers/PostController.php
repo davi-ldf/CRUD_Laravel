@@ -37,4 +37,10 @@ class PostController extends Controller
 
         dd($post);
     }
+
+    public function all(Request $r) {
+        $posts = Post::all();
+        
+        return $posts;
+    }
 }

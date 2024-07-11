@@ -33,8 +33,8 @@ class PostController extends Controller
         
         $post = new Post();
 
-        $posts = $post->all();
+        $post = $post->all();
 
-        dd($posts);
+        dd($post);
     }
 }

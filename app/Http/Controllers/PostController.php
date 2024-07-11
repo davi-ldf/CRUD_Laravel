@@ -44,4 +44,8 @@ class PostController extends Controller
 
         return $posts;
     }
+
+    public function update(Request $request) {
+        
+    }
 }

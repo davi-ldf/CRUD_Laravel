@@ -46,6 +46,12 @@ class PostController extends Controller
     }
 
     public function update(Request $request) {
-        
+        //$post = Post::find(1);
+        //$post->content = 'Meu conteúdo atualizado';
+        $post = Post::where('id', '>', 1)->update([
+            'author' => 'Desconhecido'
+        ]);
+        //$post->save();
+        return $post;
     }
 }

@@ -22,7 +22,7 @@ class PostController extends Controller
         // Forma menos convencional
         $post = new Post();
 
-        $post->title = 'Meu Terceiro Post';
+        $post->title = 'Meu Novo Post';
         $post->content = 'Conteúdo do post';
         $post->author = 'Nikola Tesla';
         $post->save();

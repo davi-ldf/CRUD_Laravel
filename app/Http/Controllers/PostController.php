@@ -57,7 +57,10 @@ class PostController extends Controller
 
     public function delete(Request $request) {
         $post = Post::find(3);
+        if($post) {
+            $post->delete();
+        }
 
-        $post->delete();
+        return 'Não existe post com este id';
     }
 }

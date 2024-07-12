@@ -20,13 +20,13 @@ class PostController extends Controller
 
 
         // Forma menos convencional
-        // $post = new Post();
+        $post = new Post();
 
-        // $post->title = 'Meu Terceiro Post';
-        // $post->content = 'Conteúdo do post';
-        // $post->author = 'Nikola Tesla';
-        // $post->save();
-        // dd($post);
+        $post->title = 'Meu Terceiro Post';
+        $post->content = 'Conteúdo do post';
+        $post->author = 'Nikola Tesla';
+        $post->save();
+        dd($post);
     }
 
     public function read(Request $r) {
@@ -56,11 +56,11 @@ class PostController extends Controller
     }
 
     public function delete(Request $request) {
-        $post = Post::find(3);
-        if($post) {
-            $post->delete();
-        }
+        $post = Post::where('id', '>', 0)->delete();
+        // if($post) {
+        //     $post->delete();
+        // }
 
-        return 'Não existe post com este id';
+        // return 'Não existe post com este id';
     }
 }

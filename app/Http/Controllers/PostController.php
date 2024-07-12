@@ -9,11 +9,11 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function create(Request $request) {
-        $new_post = [
-            'title' => 'Meu Primeiro Post',
-            'content' => 'Conteúdo Qualquer',
-            'author' => 'Davi'
-        ];
+        // $new_post = [
+        //     'title' => 'Meu Primeiro Post',
+        //     'content' => 'Conteúdo Qualquer',
+        //     'author' => 'Davi'
+        // ];
         // Forma mais convencional de criar um registro no Database
         // $post = new Post($new_post);
         // $post->save();
@@ -22,7 +22,7 @@ class PostController extends Controller
         // Forma menos convencional
         // $post = new Post();
 
-        // $post->title = 'Meu Segundo Post';
+        // $post->title = 'Meu Terceiro Post';
         // $post->content = 'Conteúdo do post';
         // $post->author = 'Nikola Tesla';
         // $post->save();
@@ -53,5 +53,11 @@ class PostController extends Controller
         ]);
         //$post->save();
         return $post;
+    }
+
+    public function delete(Request $request) {
+        $post = Post::find(3);
+
+        $post->delete();
     }
 }

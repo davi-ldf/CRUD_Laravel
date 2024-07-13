@@ -23,7 +23,24 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // $new_post = [
+        //     'title' => 'Meu Primeiro Post',
+        //     'content' => 'Conteúdo Qualquer',
+        //     'author' => 'Davi'
+        // ];
+        // Forma mais convencional de criar um registro no Database
+        // $post = new Post($new_post);
+        // $post->save();
+
+
+        // Forma menos convencional
+        $post = new Post();
+
+        $post->title = 'Meu Novo Post';
+        $post->content = 'Conteúdo do post';
+        $post->author = 'Nikola Tesla';
+        $post->save();
+        dd($post);
     }
 
     /**

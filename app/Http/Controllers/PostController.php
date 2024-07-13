@@ -70,9 +70,16 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        //$post = Post::find(1);
+        //$post->content = 'Meu conteúdo atualizado';
+        //$post->save();
+        $posts = Post::find($id)->update([
+            'author' => 'Alessandro',
+            'title' => 'Alterado'
+        ]);
+        return $posts;
     }
 
     /**

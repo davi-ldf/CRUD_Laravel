@@ -42,7 +42,8 @@ class PostController extends Controller
         $post->content = 'Conteúdo do post';
         $post->author = 'Nikola Tesla';
         $post->save();
-        dd($post);
+        
+        return $post;
     }
 
     /**

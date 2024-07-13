@@ -51,7 +51,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // No futuro, receberá um post com um novo recurso.
     }
 
     /**

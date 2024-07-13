@@ -23,6 +23,8 @@ class PostController extends Controller
      */
     public function create()
     {
+        // No futuro, vai só exibir um formulário
+
         // $new_post = [
         //     'title' => 'Meu Primeiro Post',
         //     'content' => 'Conteúdo Qualquer',

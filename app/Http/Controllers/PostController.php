@@ -34,7 +34,7 @@ class PostController extends Controller
         $post = new Post();
 
         $post = $post->find(1);
-        //O find busca pela Primary Key (id)
+        //O find busca pela Primary Key (id).
 
         return $post;
     }

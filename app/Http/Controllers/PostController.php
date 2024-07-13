@@ -57,9 +57,14 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $post = new Post();
+
+        $post = $post->find($id);
+        //O find busca pela Primary Key (id).
+
+        return $post;
     }
 
     /**
